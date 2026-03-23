@@ -1,7 +1,8 @@
 <?php
 session_start();
-if($_POST['role']==="player"){
-    $_SESSION['role']="player";
-}else if($_POST['role']==="manager"){
-    $_SESSION['role']="manager";
+
+$allowed = ['player', 'manager'];
+if (!empty($_POST['role']) && in_array($_POST['role'], $allowed)) {
+	$_SESSION['role'] = $_POST['role'];
 }
+?>
