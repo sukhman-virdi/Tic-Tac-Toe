@@ -49,7 +49,7 @@ if ($conn->query($query) === TRUE) {
 	$conn->close();
  
 	// Redirect to admin page
-	header("Location: admin.html");
+	header("Location: admin.php");
 	exit();
 } else {
 	echo "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css'>";
