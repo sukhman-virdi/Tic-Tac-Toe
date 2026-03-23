@@ -32,25 +32,25 @@
 			<form action="adminSignUp.php" method="post">
 				<div class="mb-3">
 					<label class="form-label">Admin ID</label>
-					<input type="text" name="AdminID" class="form-control" placeholder="e.g. 14">
+					<input type="text" name="AdminID" class="form-control" placeholder="e.g. 6">
 				</div>
 				<div class="mb-3">
-					<label class="form-label">Username</label>
-					<input type="text" name="Username" class="form-control" placeholder="e.g. admin_x">
+					<label class="form-label">Full Name</label>
+					<input type="text" name="Name" class="form-control" placeholder="e.g. Jane Smith">
 				</div>
 				<div class="mb-3">
 					<label class="form-label">Email</label>
-					<input type="text" name="Email" class="form-control" placeholder="e.g. admin@email.com">
+					<input type="text" name="Email" class="form-control" placeholder="e.g. jane@email.com">
 				</div>
 				<div class="mb-3">
 					<label class="form-label">Password</label>
 					<input type="text" name="Password" class="form-control" placeholder="Enter password">
 				</div>
-                <div class="mb-3">
-					<label class="form-label">Level</label>
-					<input type="number" name="Level" class="form-control" placeholder="Enter level 1-5" min="0">
+				<div class="mb-3">
+					<label class="form-label">Level <span class="text-muted">(1=Operations, 2=Management, 3=Moderation, 4=Support, 5=Development)</span></label>
+					<input type="number" name="Level" class="form-control" placeholder="e.g. 1">
 				</div>
-				<button type="submit" class="btn btn-success w-100">Sign Up</button>
+				<button type="submit" class="btn btn-danger w-100">Sign Up as Admin</button>
 			</form>
 		</div>
 	</div>
