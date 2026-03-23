@@ -50,7 +50,7 @@ if ($conn->query($query) === TRUE) {
 			exit;
 		}
 		$conn->close();
-		header("Location: player.html");
+		header("Location: player.php");
 		exit();
 	} else if ($_SESSION['role'] === "manager") {
 		if ($conn->query("INSERT INTO TournamentManager VALUES('$UserID', 0)") !== TRUE) {
@@ -58,7 +58,7 @@ if ($conn->query($query) === TRUE) {
 			exit;
 		}
 		$conn->close();
-		header("Location: manager.html");
+		header("Location: manager.php");
 		exit();
 	}
 } else {
