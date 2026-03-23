@@ -39,7 +39,7 @@ if ($result->num_rows > 0) {
 	$conn->close();
  
 	// Redirect to admin page
-	header("Location: admin.html");
+	header("Location: admin.php");
 	exit();
 } else {
 	// No match found
