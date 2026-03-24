@@ -12,8 +12,10 @@ $Password = $_POST['Password'];
  
 // Input validation
 if (empty($Email) || empty($Password)) {
-	echo "Error: All fields are required. <br>";
-	echo "<a class='btn btn-secondary mt-2' href='adminSignIn.html'>Go Back</a>";
+	echo "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css'>";
+	echo "<div class='container mt-4'>";
+	echo "<div class='alert alert-danger'>Error: All fields are required.</div>";
+	echo "<a class='btn btn-secondary' href='adminSignIn.html'>Go Back</a></div>";
 	exit;
 }
  
@@ -42,7 +44,6 @@ if ($result->num_rows > 0) {
 	header("Location: admin.php");
 	exit();
 } else {
-	// No match found
 	echo "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css'>";
 	echo "<div class='container mt-4'>";
 	echo "<div class='alert alert-danger'>Error: Incorrect email or password. Please try again.</div>";
