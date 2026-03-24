@@ -14,15 +14,19 @@ $Password = $_POST['Password'];
  
 // Input validation
 if (empty($UserID) || empty($Username) || empty($Email) || empty($Password)) {
-	echo "Error: All fields are required. <br>";
-	echo "<a class='btn btn-secondary mt-2' href='signUp.html'>Go Back</a>";
+	echo "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css'>";
+	echo "<div class='container mt-4'>";
+	echo "<div class='alert alert-danger'>Error: All fields are required.</div>";
+	echo "<a class='btn btn-secondary' href='signUp.html'>Go Back</a></div>";
 	exit;
 }
  
 // Make sure role was set from index.html
 if (empty($_SESSION['role'])) {
-	echo "Error: Role not set. Please go back and select a role. <br>";
-	echo "<a class='btn btn-secondary mt-2' href='index.html'>Go Back</a>";
+	echo "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css'>";
+	echo "<div class='container mt-4'>";
+	echo "<div class='alert alert-danger'>Error: Role not set. Please go back and select a role.</div>";
+	echo "<a class='btn btn-secondary' href='index.html'>Go Back</a></div>";
 	exit;
 }
  
@@ -41,7 +45,6 @@ $query = "INSERT INTO GameUser VALUES('$UserID', '$Username', '$Email', '$Passwo
 if ($conn->query($query) === TRUE) {
 	$_SESSION['UserID']   = $UserID;
 	$_SESSION['Username'] = $Username;
-	// Role is already in session from checkRole.php
  
 	// Insert into Player or TournamentManager based on role
 	if ($_SESSION['role'] === "player") {
