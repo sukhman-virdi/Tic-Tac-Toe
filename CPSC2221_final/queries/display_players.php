@@ -19,7 +19,7 @@ if ($conn->connect_error) {
 $query = "SELECT p.PlayerID, gu.Username, p.TotalWins, p.TotalLosses, p.TotalDraws, p.RankingPoints
           FROM Player p
           JOIN GameUser gu ON p.PlayerID = gu.UserID
-          ORDER BY p.RankingPoints DESC";
+          ORDER BY p.RankingPoints DESC LIMIT 10";
 $result = $conn->query($query);
  
 echo "<h2>All Players</h2>";
