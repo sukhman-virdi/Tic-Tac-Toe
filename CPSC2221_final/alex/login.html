@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login - Tic Tac Toe</title>
   <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css"/>
-  <link rel="stylesheet" href="login.css"/>
+  <link rel="stylesheet" href="login.css"/> 
 </head>
-<body>
+<body>  
 
   <div class="sidebar">
     <nav class="sidebar-nav">
@@ -16,8 +16,8 @@
       <button class="nav-btn" onclick="window.location.href='game.html'">🎮 Play</button>
       <button class="nav-btn" onclick="window.location.href='leaderboard.html'">🏆 Leaderboard</button>
       <button class="nav-btn" onclick="window.location.href='profile.html'">👤 Profile</button>
-    </nav>
-  </div> 
+    </nav> 
+  </div>   
 
   <main class="main">
     <div class="card">
@@ -42,19 +42,22 @@
       <p class="result-msg" id="result-msg"></p>
 
       <p class="login-link">Don't have an account?
-        <a href="createaccount.html">Sign Up</a>
+        <a href="createaccount.html">Sign Up</a> 
+      </p>
+      <p class="login-link">
+        <a href="adminhome.html">Staff Login</a>
       </p>
     </div>
-  </main>
-
-  <!-- Success Popup -->
-  <div class="popup" id="popup">
-    <div class="popup-box">
-      <h2>👋 Welcome Back!</h2>
-      <p>Logged in as <span id="popup-username"></span></p>
-      <p>Redirecting to home page...</p>
+    <!-- Success Popup -->
+    <div class="popup" id="popup">
+      <div class="popup-box">
+        <h2>👋 Welcome Back!</h2>
+        <p>Logged in as <span id="popup-username"></span></p>
+        <p>Redirecting to home page...</p>
+      </div>
     </div>
-  </div>
+  </main> 
+
 
   <script>
     function handleLogin() {

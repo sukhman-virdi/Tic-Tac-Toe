@@ -19,12 +19,12 @@ body {
   min-height: 100vh;
   overflow-y: auto;
   margin: 0;
+  height: 100vh;
 }
 
 /* ── Sidebar ── */
 .sidebar {
   height: 100vh;
-  position: sticky;
   top: 0;
   width: 190px;
   min-height: 100vh;
@@ -73,20 +73,18 @@ body {
 .main {
   flex: 1;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  padding: 40px 20px;
-  overflow-y: auto;
+  min-height: 100vh;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  width: 100%;
-  max-width: 800px;
-  padding: 40px;
+  gap: 36px;
+  padding: 60px 80px;
+  margin: auto 0;
 }
 
 /* ── Title ── */
@@ -112,7 +110,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  padding-bottom: 60px;
+  /* padding-bottom: 60px; */
 }
 
 /* ── Buttons ── */
