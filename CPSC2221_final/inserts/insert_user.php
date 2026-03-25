@@ -55,5 +55,5 @@ if ($conn->query($query) === TRUE) {
 
 $conn->close();
  
-echo "</div><br><a class='btn btn-secondary' href='insert_user.html'>Insert Another User</a> | <a class='btn btn-secondary' href='../home.html'>Main Menu</a>";
+echo "</div><br><a class='btn btn-secondary' href='insert_user.html'>Insert Another User</a> | <a href='../home.html'>Main Menu</a>";
 ?>
