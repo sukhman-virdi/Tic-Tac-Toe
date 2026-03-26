@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 // POST requests — add, update, delete
 } else if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $action        = $_POST['action'] ?? '';
-    $adminID       = $_SESSION['AdminID'] ?? 1; // fallback to 1 for testing
+    $adminID       = $_SESSION['adminID'] ?? 1; // fallback to 1 for testing
 
     if ($action === 'update') {
         $id    = $_POST['AchievementID'];

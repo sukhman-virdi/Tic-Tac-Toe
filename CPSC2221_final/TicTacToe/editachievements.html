@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TicTacToe - Admin - Edit Achievements</title>
+  <title>Edit Achievements - TicTacToe Platform</title>
   <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css"/>
   <link rel="stylesheet" href="editachievements.css"/> 
@@ -12,10 +12,11 @@
 
   <div class="sidebar">
     <nav class="sidebar-nav">
-      <button class="nav-btn" onclick="window.location.href='home.html'">🏠 Home</button>
-      <button class="nav-btn" onclick="window.location.href='game.html'">🎮 Play</button>
-      <button class="nav-btn" onclick="window.location.href='leaderboard.html'">🏆 Leaderboard</button>
-      <button class="nav-btn" onclick="window.location.href='profile.html'">👤 Profile</button>
+      <button class="nav-btn" onclick="window.location.href='adminHome.html'">🏠 Home</button>
+      <button class="nav-btn" onclick="window.location.href='overseepeople.html'">👥 Oversee People</button>
+      <button class="nav-btn" onclick="window.location.href='editAdmin.html'">✏️ Edit Admins</button>
+      <button class="nav-btn" onclick="window.location.href=''">🏆 Edit Achievement</button>
+      <button class="nav-btn" onclick="window.location.href='adminProfile.html'">👤 Profile</button>
     </nav>
   </div>
 
@@ -206,7 +207,6 @@
 
       renderTable(filtered);
     }
-
     // ── Edit ──
     function openEditSelected() {
       if (!selectedID) {
