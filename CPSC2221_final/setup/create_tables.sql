@@ -299,55 +299,55 @@ INSERT INTO Joins VALUES (5, 4, '2025-11-10');
 INSERT INTO Joins VALUES (6, 5, '2025-11-01');
 
 -- ------------------------------------------------------------
--- TRIGGERS
+-- TRIGGERS (Were messing with the same game logic )
 -- ------------------------------------------------------------
 
 -- Drop triggers if they already exist
-DROP TRIGGER IF EXISTS after_match_winner_update;
-DROP TRIGGER IF EXISTS after_tournament_insert;
+-- DROP TRIGGER IF EXISTS after_match_winner_update;
+-- DROP TRIGGER IF EXISTS after_tournament_insert;
 
--- ------------------------------------------------------------
--- Trigger 1: Auto-update Player stats when a Match Winner is set,
--- increment TotalWins for the winner and TotalLosses for the loser
+-- -- ------------------------------------------------------------
+-- -- Trigger 1: Auto-update Player stats when a Match Winner is set,
+-- -- increment TotalWins for the winner and TotalLosses for the loser
 
-DELIMITER $$
+-- DELIMITER $$
 
-CREATE TRIGGER after_match_winner_update
-AFTER UPDATE ON Match_Contained
-FOR EACH ROW
-BEGIN
-	-- Fire if winner is just set
-	IF OLD.Winner_ID IS NULL AND NEW.Winner_ID IS NOT NULL THEN
+-- CREATE TRIGGER after_match_winner_update
+-- AFTER UPDATE ON Match_Contained
+-- FOR EACH ROW
+-- BEGIN
+-- 	-- Fire if winner is just set
+-- 	IF OLD.Winner_ID IS NULL AND NEW.Winner_ID IS NOT NULL THEN
 
-		UPDATE Player
-		SET TotalWins = TotalWins + 1
-		WHERE PlayerID = NEW.Winner_ID;
+-- 		UPDATE Player
+-- 		SET TotalWins = TotalWins + 1
+-- 		WHERE PlayerID = NEW.Winner_ID;
 
-		UPDATE Player
-		SET TotalLosses = TotalLosses + 1
-		WHERE PlayerID = (
-			SELECT CASE
-				WHEN Player1_ID = NEW.Winner_ID THEN Player2_ID
-				ELSE Player1_ID
-			END
-			FROM Plays_inMatch
-			WHERE MatchID = NEW.MatchID
-		);
+-- 		UPDATE Player
+-- 		SET TotalLosses = TotalLosses + 1
+-- 		WHERE PlayerID = (
+-- 			SELECT CASE
+-- 				WHEN Player1_ID = NEW.Winner_ID THEN Player2_ID
+-- 				ELSE Player1_ID
+-- 			END
+-- 			FROM Plays_inMatch
+-- 			WHERE MatchID = NEW.MatchID
+-- 		);
 
-	END IF;
-END$$
+-- 	END IF;
+-- END$$
 
--- ------------------------------------------------------------
--- Trigger 2: Auto-increment Tournaments_Organized for a Manager,
--- automatically update the manager's Tournaments_Organized count
+-- -- ------------------------------------------------------------
+-- -- Trigger 2: Auto-increment Tournaments_Organized for a Manager,
+-- -- automatically update the manager's Tournaments_Organized count
 
-CREATE TRIGGER after_tournament_insert
-AFTER INSERT ON Tournament_Managed
-FOR EACH ROW
-BEGIN
-	UPDATE TournamentManager
-	SET Tournaments_Organized = Tournaments_Organized + 1
-	WHERE ManagerID = NEW.ManagerID;
-END$$
+-- CREATE TRIGGER after_tournament_insert
+-- AFTER INSERT ON Tournament_Managed
+-- FOR EACH ROW
+-- BEGIN
+-- 	UPDATE TournamentManager
+-- 	SET Tournaments_Organized = Tournaments_Organized + 1
+-- 	WHERE ManagerID = NEW.ManagerID;
+-- END$$
 
-DELIMITER ;
+-- DELIMITER ;
