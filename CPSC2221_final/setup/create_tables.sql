@@ -355,48 +355,116 @@ INSERT INTO Match_Contained VALUES (23, '2025-10-16', '14:00:00', 19, 14);
 INSERT INTO Match_Contained VALUES (24, '2025-12-21', '11:00:00', 23, 15);
 INSERT INTO Match_Contained VALUES (25, '2025-12-21', '15:00:00', 20, 15);
  
-INSERT INTO Move_MadeIn VALUES (1, 1, 'MiddleMiddle');
-INSERT INTO Move_MadeIn VALUES (1, 2, 'TopLeft');
-INSERT INTO Move_MadeIn VALUES (1, 3, 'TopRight');
-INSERT INTO Move_MadeIn VALUES (1, 4, 'BottomLeft');
-INSERT INTO Move_MadeIn VALUES (1, 5, 'BottomRight');
-INSERT INTO Move_MadeIn VALUES (2, 1, 'TopMiddle');
-INSERT INTO Move_MadeIn VALUES (2, 2, 'MiddleLeft');
-INSERT INTO Move_MadeIn VALUES (2, 3, 'MiddleRight');
-INSERT INTO Move_MadeIn VALUES (3, 1, 'MiddleMiddle');
-INSERT INTO Move_MadeIn VALUES (3, 2, 'TopLeft');
-INSERT INTO Move_MadeIn VALUES (6,  1, 'MiddleMiddle');
-INSERT INTO Move_MadeIn VALUES (6,  2, 'TopLeft');
-INSERT INTO Move_MadeIn VALUES (6,  3, 'BottomRight');
-INSERT INTO Move_MadeIn VALUES (7,  1, 'TopRight');
-INSERT INTO Move_MadeIn VALUES (7,  2, 'MiddleLeft');
-INSERT INTO Move_MadeIn VALUES (7,  3, 'BottomLeft');
-INSERT INTO Move_MadeIn VALUES (8,  1, 'MiddleMiddle');
-INSERT INTO Move_MadeIn VALUES (8,  2, 'TopMiddle');
-INSERT INTO Move_MadeIn VALUES (9,  1, 'BottomMiddle');
-INSERT INTO Move_MadeIn VALUES (9,  2, 'MiddleRight');
-INSERT INTO Move_MadeIn VALUES (10, 1, 'TopLeft');
-INSERT INTO Move_MadeIn VALUES (10, 2, 'BottomRight');
-INSERT INTO Move_MadeIn VALUES (11, 1, 'MiddleMiddle');
-INSERT INTO Move_MadeIn VALUES (11, 2, 'TopRight');
-INSERT INTO Move_MadeIn VALUES (12, 1, 'BottomLeft');
-INSERT INTO Move_MadeIn VALUES (12, 2, 'TopMiddle');
-INSERT INTO Move_MadeIn VALUES (13, 1, 'MiddleLeft');
-INSERT INTO Move_MadeIn VALUES (13, 2, 'MiddleRight');
-INSERT INTO Move_MadeIn VALUES (14, 1, 'TopLeft');
-INSERT INTO Move_MadeIn VALUES (14, 2, 'BottomMiddle');
-INSERT INTO Move_MadeIn VALUES (15, 1, 'MiddleMiddle');
-INSERT INTO Move_MadeIn VALUES (15, 2, 'TopRight');
-INSERT INTO Move_MadeIn VALUES (16, 1, 'BottomRight');
-INSERT INTO Move_MadeIn VALUES (17, 1, 'TopLeft');
-INSERT INTO Move_MadeIn VALUES (18, 1, 'MiddleMiddle');
-INSERT INTO Move_MadeIn VALUES (19, 1, 'BottomLeft');
-INSERT INTO Move_MadeIn VALUES (20, 1, 'TopRight');
-INSERT INTO Move_MadeIn VALUES (21, 1, 'MiddleLeft');
-INSERT INTO Move_MadeIn VALUES (22, 1, 'TopMiddle');
-INSERT INTO Move_MadeIn VALUES (23, 1, 'BottomMiddle');
-INSERT INTO Move_MadeIn VALUES (24, 1, 'MiddleRight');
-INSERT INTO Move_MadeIn VALUES (25, 1, 'BottomRight');
+INSERT INTO Move_MadeIn VALUES (1, 1, ',,,,X,,,,');
+INSERT INTO Move_MadeIn VALUES (1, 2, 'O,,,X,,,,,' );
+INSERT INTO Move_MadeIn VALUES (1, 3, 'O,,X,X,,,,,');
+INSERT INTO Move_MadeIn VALUES (1, 4, 'O,,X,X,,,O,,');
+INSERT INTO Move_MadeIn VALUES (1, 5, 'O,X,X,X,,,O,,');
+INSERT INTO Move_MadeIn VALUES (1, 6, 'O,X,X,O,X,,,O,,');
+INSERT INTO Move_MadeIn VALUES (1, 7, 'O,X,X,O,X,,,O,X,');
+ 
+INSERT INTO Move_MadeIn VALUES (2, 1, ',X,,,,,,,');
+INSERT INTO Move_MadeIn VALUES (2, 2, ',X,,O,,,,,');
+INSERT INTO Move_MadeIn VALUES (2, 3, ',X,,O,,X,,,');
+INSERT INTO Move_MadeIn VALUES (2, 4, ',X,,O,,X,,O,');
+INSERT INTO Move_MadeIn VALUES (2, 5, ',X,,O,X,X,,O,');
+ 
+INSERT INTO Move_MadeIn VALUES (3, 1, ',,,,X,,,,');
+INSERT INTO Move_MadeIn VALUES (3, 2, 'O,,,X,,,,,' );
+INSERT INTO Move_MadeIn VALUES (3, 3, 'O,,X,X,,,,,');
+INSERT INTO Move_MadeIn VALUES (3, 4, 'O,O,X,X,,,,,');
+INSERT INTO Move_MadeIn VALUES (3, 5, 'O,O,X,X,,,X,,');
+
+INSERT INTO Move_MadeIn VALUES (4, 1, 'X,,,,,,,,');
+INSERT INTO Move_MadeIn VALUES (4, 2, 'X,,,, O,,,,');
+INSERT INTO Move_MadeIn VALUES (4, 3, 'X,X,,,O,,,,');
+INSERT INTO Move_MadeIn VALUES (4, 4, 'X,X,,,O,,,O,');
+INSERT INTO Move_MadeIn VALUES (4, 5, 'X,X,X,,O,,,O,');
+
+INSERT INTO Move_MadeIn VALUES (5, 1, 'X,,,,,,,,');
+INSERT INTO Move_MadeIn VALUES (5, 2, 'X,,,,O,,,,');
+INSERT INTO Move_MadeIn VALUES (5, 3, 'X,,,X,O,,,,');
+INSERT INTO Move_MadeIn VALUES (5, 4, 'X,,O,X,O,,,,');
+INSERT INTO Move_MadeIn VALUES (5, 5, 'X,,O,X,O,,,,,');
+
+INSERT INTO Move_MadeIn VALUES (6, 1, ',,,,X,,,,');
+INSERT INTO Move_MadeIn VALUES (6, 2, ',,O,X,,,,,' );
+INSERT INTO Move_MadeIn VALUES (6, 3, 'X,,O,X,,,,,');
+INSERT INTO Move_MadeIn VALUES (6, 4, 'X,,O,X,,,O,,');
+INSERT INTO Move_MadeIn VALUES (6, 5, 'X,,O,X,,,,O,X');
+
+INSERT INTO Move_MadeIn VALUES (7, 1, ',,X,,,,,,');
+INSERT INTO Move_MadeIn VALUES (7, 2, 'O,,X,,,,,,' );
+INSERT INTO Move_MadeIn VALUES (7, 3, 'O,,X,,X,,,,');
+INSERT INTO Move_MadeIn VALUES (7, 4, 'O,,X,O,X,,,,');
+INSERT INTO Move_MadeIn VALUES (7, 5, 'O,,X,O,X,,,, X');
+INSERT INTO Move_MadeIn VALUES (7, 6, 'O,,X,O,X,,,O,X');
+
+INSERT INTO Move_MadeIn VALUES (8, 1, ',,,,X,,,,');
+INSERT INTO Move_MadeIn VALUES (8, 2, 'O,,,X,,,,,' );
+INSERT INTO Move_MadeIn VALUES (8, 3, 'O,,,X,,,X,,');
+INSERT INTO Move_MadeIn VALUES (8, 4, 'O,O,,X,,,X,,');
+INSERT INTO Move_MadeIn VALUES (8, 5, 'O,O,,X,,,X,,X');
+INSERT INTO Move_MadeIn VALUES (8, 6, 'O,O,O,X,,,X,,X');
+
+INSERT INTO Move_MadeIn VALUES (9, 1, 'X,,,,,,,,');
+INSERT INTO Move_MadeIn VALUES (9, 2, 'X,,,,O,,,,');
+INSERT INTO Move_MadeIn VALUES (9, 3, 'X,X,,,O,,,,');
+INSERT INTO Move_MadeIn VALUES (9, 4, 'X,X,O,,O,,,,');
+INSERT INTO Move_MadeIn VALUES (9, 5, 'X,X,O,,O,,,X,');
+INSERT INTO Move_MadeIn VALUES (9, 6, 'X,X,O,,O,,,X,');
+
+INSERT INTO Move_MadeIn VALUES (10, 1, 'X,,,,,,,,');
+INSERT INTO Move_MadeIn VALUES (10, 2, 'X,,O,,,,,,' );
+INSERT INTO Move_MadeIn VALUES (10, 3, 'X,,O,,X,,,,');
+INSERT INTO Move_MadeIn VALUES (10, 4, 'X,,O,,X,O,,,');
+INSERT INTO Move_MadeIn VALUES (10, 5, 'X,,O,,X,O,,, X');
+INSERT INTO Move_MadeIn VALUES (10, 6, 'X,,O,,X,O,X,,O');
+
+INSERT INTO Move_MadeIn VALUES (11, 1, ',,,,X,,,,');
+INSERT INTO Move_MadeIn VALUES (11, 2, ',,,,X,,,O,,');
+INSERT INTO Move_MadeIn VALUES (11, 3, 'X,,,X,,,,O,,');
+INSERT INTO Move_MadeIn VALUES (11, 4, 'X,,,X,,,,O,O');
+INSERT INTO Move_MadeIn VALUES (11, 5, 'X,,X,X,,,,O,O');
+INSERT INTO Move_MadeIn VALUES (11, 6, 'X,,X,X,,,O,O,O');
+
+INSERT INTO Move_MadeIn VALUES (12, 1, ',,,,,,X,,');
+INSERT INTO Move_MadeIn VALUES (12, 2, 'O,,,,,X,,,' );
+INSERT INTO Move_MadeIn VALUES (12, 3, 'O,,,,,,X,X,');
+INSERT INTO Move_MadeIn VALUES (12, 4, 'O,,,,O,,X,X,');
+INSERT INTO Move_MadeIn VALUES (12, 5, 'O,,,,O,,X,X,X');
+
+INSERT INTO Move_MadeIn VALUES (13, 1, 'X,,,,,,,,');
+INSERT INTO Move_MadeIn VALUES (13, 2, 'X,,,O,,,,,' );
+INSERT INTO Move_MadeIn VALUES (13, 3, 'X,,X,O,,,,,');
+INSERT INTO Move_MadeIn VALUES (13, 4, 'X,,X,O,O,,,,');
+INSERT INTO Move_MadeIn VALUES (13, 5, 'X,,X,O,O,,,,X');
+INSERT INTO Move_MadeIn VALUES (13, 6, 'X,,X,O,O,O,,,X');
+
+INSERT INTO Move_MadeIn VALUES (14, 1, ',,X,,,,,,');
+INSERT INTO Move_MadeIn VALUES (14, 2, 'O,,X,,,,,,' );
+INSERT INTO Move_MadeIn VALUES (14, 3, 'O,,X,,,,X,,');
+INSERT INTO Move_MadeIn VALUES (14, 4, 'O,,X,,O,,,X,,');
+INSERT INTO Move_MadeIn VALUES (14, 5, 'O,X,X,,O,,,X,,');
+INSERT INTO Move_MadeIn VALUES (14, 6, 'O,X,X,,O,,X,,,O');
+
+INSERT INTO Move_MadeIn VALUES (15, 1, 'X,,,,,,,,');
+INSERT INTO Move_MadeIn VALUES (15, 2, 'X,,O,,,,,,' );
+INSERT INTO Move_MadeIn VALUES (15, 3, 'X,,O,,X,,,,');
+INSERT INTO Move_MadeIn VALUES (15, 4, 'X,,O,,X,O,,,');
+INSERT INTO Move_MadeIn VALUES (15, 5, 'X,,O,,X,O,X,,');
+INSERT INTO Move_MadeIn VALUES (15, 6, 'X,,O,,X,O,X,,O');
+ 
+INSERT INTO Move_MadeIn VALUES (16, 1, ',,,,X,,,,');
+INSERT INTO Move_MadeIn VALUES (17, 1, 'X,,,,,,,,');
+INSERT INTO Move_MadeIn VALUES (18, 1, ',,,,X,,,,');
+INSERT INTO Move_MadeIn VALUES (19, 1, ',,,,,,X,,');
+INSERT INTO Move_MadeIn VALUES (20, 1, ',,X,,,,,,');
+INSERT INTO Move_MadeIn VALUES (21, 1, ',,,X,,,,,');
+INSERT INTO Move_MadeIn VALUES (22, 1, ',X,,,,,,,');
+INSERT INTO Move_MadeIn VALUES (23, 1, ',,,,,,,X,');
+INSERT INTO Move_MadeIn VALUES (24, 1, ',,,,,X,,,');
+INSERT INTO Move_MadeIn VALUES (25, 1, ',,,,,,,,X');
  
 INSERT INTO Plays_inMatch VALUES (1, 1, 2);
 INSERT INTO Plays_inMatch VALUES (2, 3, 4);
