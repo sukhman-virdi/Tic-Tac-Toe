@@ -220,6 +220,10 @@ INSERT INTO Player VALUES (3, 15, 2, 3, 950);
 INSERT INTO Player VALUES (4, 4,  8, 2, 480);
 INSERT INTO Player VALUES (5, 6,  6, 4, 600);
 INSERT INTO Player VALUES (6, 12, 1, 1, 900);
+
+-- needed to save games with AI
+INSERT IGNORE INTO GameUser (UserID, Username, Email, Password) VALUES (0, 'AI', 'ai@system', 'N/A');
+INSERT IGNORE INTO Player   (PlayerID) VALUES (0);
  
 INSERT INTO TournamentManager VALUES (9,  3);
 INSERT INTO TournamentManager VALUES (10, 5);
