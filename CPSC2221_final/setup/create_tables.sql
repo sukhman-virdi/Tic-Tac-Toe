@@ -103,7 +103,7 @@ CREATE TABLE Match_Contained (
     Match_Date DATE DEFAULT (CURRENT_DATE),
     Match_Time TIME DEFAULT (CURRENT_TIME),
     Winner_ID INT,
-    TournamentID INT NOT NULL,
+    TournamentID INT, -- can be null to save mactches with AI
     FOREIGN KEY (TournamentID) REFERENCES Tournament_Managed(TournamentID)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
