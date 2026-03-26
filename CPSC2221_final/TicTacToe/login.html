@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tic Tac Toe - Login</title>
+  <title>Login - Tic Tac Toe</title>
   <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css"/>
   <link rel="stylesheet" href="login.css"/> 
 </head>
-<body>    
+<body>  
 
   <div class="sidebar">
     <nav class="sidebar-nav">
@@ -16,9 +16,6 @@
       <button class="nav-btn" onclick="window.location.href='game.html'">🎮 Play</button>
       <button class="nav-btn" onclick="window.location.href='leaderboard.html'">🏆 Leaderboard</button>
       <button class="nav-btn" onclick="window.location.href='profile.html'">👤 Profile</button>
-      <p class="signout-link">
-        <a href="logout.php">Sign Out</a>
-      </p>
     </nav> 
   </div>   
 
@@ -48,7 +45,7 @@
         <a href="createaccount.html">Sign Up</a> 
       </p>
       <p class="login-link">
-        <a href="adminhome.html">Staff Login</a>
+        <a href="selectRole.html">Staff Login</a>
       </p>
     </div>
     <!-- Success Popup -->
@@ -103,7 +100,7 @@
             document.getElementById('popup').classList.add('show');
             // Redirect after 2 seconds
             setTimeout(() => {
-              window.location.href = `home.html`;
+              window.location.href = `profile.html?id=${data.userID}`;
             }, 2000);
           } else {
             resultMsg.textContent = data.error || 'Invalid username or password';
